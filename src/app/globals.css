@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+/* Design Tokens */
+:root {
+  --bg-primary: #030712;
+  --text-primary: #f9fafb;
+  --accent-gold: #d4af37;
+}
+
+/* Base Layer */
+@layer base {
+  html, body {
+    @apply min-h-screen antialiased;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  h1, h2, h3 {
+    @apply tracking-tight;
+  }
+
+  svg path {
+    @apply transition-all duration-700 ease-in-out;
+  }
+}
+
+/* Custom Cursor Hide (Desktop Only) */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
